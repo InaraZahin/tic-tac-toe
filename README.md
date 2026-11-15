@@ -6,7 +6,7 @@
 ![Vitest](https://img.shields.io/badge/unit-Vitest-6E9F18?logo=vitest&logoColor=white)
 ![Playwright](https://img.shields.io/badge/E2E-Playwright-2EAD33?logo=playwright&logoColor=white)
 
-**▶ Play it: https://inarazahin.github.io/oop-tic-tac-toe/**
+**▶ Play it: https://inarazahin.github.io/tic-tac-toe/**
 
 Tic-tac-toe in the browser, against a friend or the computer. On *Hard* the computer plays
 perfectly, and that isn't just a claim: a test plays it against **every possible sequence of
