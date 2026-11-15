@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Tic-tac-toe against a friend or an unbeatable computer. Keyboard and screen-reader friendly." />
+    <title>Tic-Tac-Toe</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⭕</text></svg>" />
+  </head>
+  <body>
+    <main class="app">
+      <header>
+        <h1>Tic-Tac-Toe</h1>
+        <p class="tagline">Can you beat the computer on <em>Hard</em>? (Spoiler: it has never lost.)</p>
+      </header>
+
+      <form class="settings" aria-label="Game settings">
+        <fieldset>
+          <legend>Opponent</legend>
+          <label><input type="radio" name="mode" value="computer" checked /> Computer</label>
+          <label><input type="radio" name="mode" value="friend" /> A friend</label>
+        </fieldset>
+        <fieldset data-computer-only>
+          <legend>Difficulty</legend>
+          <label><input type="radio" name="difficulty" value="easy" /> Easy</label>
+          <label><input type="radio" name="difficulty" value="medium" checked /> Medium</label>
+          <label><input type="radio" name="difficulty" value="hard" /> Hard</label>
+        </fieldset>
+        <fieldset data-computer-only>
+          <legend>You play</legend>
+          <label><input type="radio" name="side" value="X" checked /> X (first)</label>
+          <label><input type="radio" name="side" value="O" /> O (second)</label>
+        </fieldset>
+      </form>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+
+      <div id="board" class="board" role="grid" aria-label="Board" aria-describedby="board-help"></div>
+      <p id="board-help" class="hint">Use the arrow keys to move between squares, Enter or Space to play.</p>
+
+      <div class="actions">
+        <button type="button" id="new-game" class="primary">New game</button>
+      </div>
+
+      <section class="score" aria-labelledby="score-heading">
+        <h2 id="score-heading">Score</h2>
+        <dl id="scoreboard"></dl>
+        <button type="button" id="reset-score" class="link">Reset score</button>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
